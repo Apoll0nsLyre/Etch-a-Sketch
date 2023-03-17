@@ -11,8 +11,7 @@
     height: 480px;
     border: 2px solid black;
 }
-.square {
+.gridElement {
     background-color: white;
-    border: 1px solid black;
-    user-select: none;
+    border: 5px solid black;
 }
