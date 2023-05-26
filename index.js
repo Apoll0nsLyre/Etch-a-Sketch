@@ -1,29 +1,35 @@
-const container = document.querySelector('.container');
-let valueSize = document.querySelector('#value');
-valueSize.addEventListener('input', function() {
-    let val = parseFloat(valueSize.value);
-    console.log(typeof val, val);
+const currentSize = 16;
+const grid = document.querySelector('.grid');
+const currentColor = 'black';
 
-});
-let currentColor = 'black';
-let backgroundColor = 'white';
-let gridSize = valueSize;
+let size = currentSize;
+let color = currentColor;
 
 function createGrid(size) {
-    container.style.gridTemplateColumns = 'repeat($(size),1fr)';
-    container.style.gridTemplateRows = 'repeat($(size),1fr)';
-    for (let i = 0; i < size * size; i++) {
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    for (let i = 0 ; i < size * size ; i++) {
         const gridElement = document.createElement('div');
-        gridElement.addEventListener('mousemove', colorGrid);
-        container.appendChild(gridElement);
-    };
+        gridElement.classList.add('grid-element');
+        gridElement.addEventListener('mouseover', changeColor);
+        gridElement.addEventListener('mousedown', changeColor);
+        grid.appendChild(gridElement);
+        }
 };
+// function createGrid(size) {
+//     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+//     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+//     for (let i = 0; i < size * size; i++) {
+//         const gridElement = document.createElement('div');
+//         gridElement.addEventListener('mousemove', changeColor);
+//         grid.appendChild(gridElement);
+//     }
+// }
 
-createGrid(gridSize);
+function changeColor(e) {
+    if (e.buttons === 1)
+        e.target.style.backgroundColor = currentColor;
+}
 
-function colorGrid(e){
-    if (e.buttons === 1) {
-    e.target.style.backgroundColor = currentColor;
-    }
-};
+createGrid(size);
 
