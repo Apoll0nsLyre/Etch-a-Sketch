@@ -76,3 +76,4 @@ function clearGrid() {
 
 createGrid(size);
 
+

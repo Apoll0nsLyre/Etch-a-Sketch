@@ -9,17 +9,24 @@ h1{
     grid-template-rows: repeat(16, 1fr);
     grid-gap: 0px;
     background-color: white;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 50px;
     padding: 0;
     width: 480px;
     height: 480px;
     border: 2px solid black;
+    display: grid;
 }
-.gridElement {
+.grid-element {
     background-color: white;
-    border: 5px solid black;
+	border-color: transparent;
+	transition: background-color 0.3s ease-in-out;
 }
+
+.grid > .grid-element:hover {
+    background-color: black;
+}
+
 .block-container{
     display: flex;
     justify-content: center;
