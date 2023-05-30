@@ -1,9 +1,14 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    grid-gap: 1px;
-    background-color: #ccc;
+    grid-gap: 0px;
+    background-color: white;
     margin: auto;
     margin-top: 50px;
     padding: 0;
@@ -14,4 +19,21 @@
 .gridElement {
     background-color: white;
     border: 5px solid black;
+}
+.block-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-container button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.block-container input{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
