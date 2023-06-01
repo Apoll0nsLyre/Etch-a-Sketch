@@ -8,6 +8,11 @@ const sizeButton = document.getElementById('new-grid-size');
 const colorButton = document.getElementById('color');
 const backgroundColorButton = document.getElementById('backg-color');
 
+let size = currentSize;
+let color = currentColor;
+let valueSize = document.getElementById("valueSize").value;
+let backgroundColor = 'white';
+
 document.getElementById('colorPalette').style.display = 'none';
 
 colorButton.addEventListener('click', () => {
@@ -18,11 +23,6 @@ colorButton.addEventListener('click', () => {
     }
     color = document.getElementById('colorPalette').value;
 });
-
-let size = currentSize;
-let color = currentColor;
-let valueSize = document.getElementById("valueSize").value;
-let backgroundColor = 'white';
 
 clearButton.addEventListener('click', clearGrid);
 sizeButton.addEventListener('click', changeSize);
