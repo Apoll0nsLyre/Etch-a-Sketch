@@ -74,6 +74,10 @@ function clearGrid() {
     });
 };
 
+function eraser() {
+    color = backgroundColor;
+};
+
 createGrid(size);
 
 

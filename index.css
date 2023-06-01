@@ -3,28 +3,43 @@ h1{
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     grid-gap: 0px;
     background-color: white;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 50px;
     padding: 0;
     width: 480px;
     height: 480px;
     border: 2px solid black;
-    display: grid;
 }
+
 .grid-element {
     background-color: white;
-	border-color: transparent;
 	transition: background-color 0.3s ease-in-out;
+    user-select: none;
 }
 
 .grid > .grid-element:hover {
-    background-color: black;
+    background-color: #ddd;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    border: 2px solid black;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.2);
 }
 
 .block-container{
@@ -32,12 +47,14 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
 .block-container button{
     margin: 10px;
     padding: 10px;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
+
 .block-container input{
     margin: 10px;
     padding: 10px;
